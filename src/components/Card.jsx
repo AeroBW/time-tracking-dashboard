@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ellipsisIcon from "../images/icon-ellipsis.svg";
+import ellipsisIcon from "/images/icon-ellipsis.svg";
 
 const backgrounds = [
   "bg-work",
@@ -24,7 +24,7 @@ function Card({ timeline }) {
   return data.map((el, i) => (
     <div
       key={el.title}
-      className={`${backgrounds[i]} tablet:mt-0 laptop:h-[190px] mt-8 flex h-[155px] items-end rounded-2xl bg-[right_1rem_top_-.5rem] bg-no-repeat`}
+      className={`${backgrounds[i]} mt-8 flex h-[155px] items-end rounded-2xl bg-[right_1rem_top_-.5rem] bg-no-repeat tablet:mt-0 laptop:h-[190px]`}
     >
       <div className="h-max w-full rounded-[14px] bg-darkBlue p-6 text-white">
         <div className="flex items-center justify-between">
@@ -33,7 +33,7 @@ function Card({ timeline }) {
             <img src={ellipsisIcon} alt="more" className="object-contain" />
           </button>
         </div>
-        <div className="laptop:block laptop:mt-4 flex items-center justify-between">
+        <div className="flex items-center justify-between laptop:mt-4 laptop:block">
           <p className="text-4xl font-light">
             {timeline === "daily"
               ? el.timeframes.daily.current === 1
